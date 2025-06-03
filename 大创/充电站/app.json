@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/recommend/recommend",
+    "pages/map/map"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "充电站选址小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.cloud": true
+  }
+}
+
+
