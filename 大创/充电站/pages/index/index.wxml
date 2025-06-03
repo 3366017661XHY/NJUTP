@@ -1,0 +1,3 @@
+<view class="cover" bindtap="goToHome">
+  <text>欢迎进入充电站选址小程序</text>
+</view>
