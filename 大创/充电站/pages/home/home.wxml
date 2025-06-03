@@ -1,0 +1,14 @@
+<!-- 页面容器 -->
+<view class="container">
+  <!-- 主标题 -->
+  <text class="title">门店选址</text>
+  
+  <!-- 功能选项容器 -->
+  <view class="options">
+    <!-- 智能推荐入口 -->
+    <view class="option" bindtap="goToRecommend">智能推荐</view>
+    
+    <!-- 单点评估入口（待实现） -->
+    <view class="option">单点评估</view>
+  </view>
+</view>
