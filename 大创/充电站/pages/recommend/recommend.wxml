@@ -1,0 +1,43 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <input hidden name="location" value="{{location}}"/>
+    
+    <!-- 主卡片容器 -->
+    <view class="card">
+      <!-- 标题区域 -->
+      <view class="header">
+        <text class="title">充电站选址评估</text>
+        <text class="subtitle">智能选址分析系统</text>
+      </view>
+
+      <!-- 问题区块 -->
+      <view class="question-card">
+        <view class="question-header">
+          <image src="images/location-icon.png" class="icon"></image>
+          <text class="question-text">您预期在哪里开站？</text>
+        </view>
+        
+        <!-- 地区选择器 -->
+        <picker mode="region" 
+                bindchange="bindRegionChange" 
+                value="{{region}}" 
+                custom-item="{{customItem}}"
+                class="region-picker">
+          <view class="picker-container">
+            <view class="current-selection">
+              <text class="region-text">{{region[2] ? region[2] : '请选择详细区域'}}</text>
+              <text class="city-text">{{region[1]}} · {{region[0]}}</text>
+            </view>
+            <image src="images/arrow-down.png" class="arrow-icon"></image>
+          </view>
+        </picker>
+      </view>
+
+      <!-- 提交按钮 -->
+      <button form-type="submit" class="submit-btn">
+        <image src="images/analyze-icon.png" class="btn-icon"></image>
+        立即智能评估
+      </button>
+    </view>
+  </form>
+</view>

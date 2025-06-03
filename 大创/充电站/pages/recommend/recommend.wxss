@@ -1,0 +1,127 @@
+/* 基础容器 */
+.container {
+  padding: 32rpx;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+/* 卡片容器 */
+.card {
+  background: #fff;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0,0,0,0.08);
+  padding: 40rpx;
+  margin-top: 48rpx;
+}
+
+/* 头部标题 */
+.header {
+  border-bottom: 2rpx solid #eee;
+  padding-bottom: 32rpx;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  display: block;
+  font-size: 40rpx;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #7f8c8d;
+}
+
+/* 问题卡片 */
+.question-card {
+  margin-bottom: 60rpx;
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 20rpx;
+}
+
+.question-text {
+  font-size: 34rpx;
+  color: #34495e;
+  font-weight: 500;
+}
+
+/* 地区选择器 */
+.region-picker {
+  background: #f8f9fa;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  transition: all 0.3s ease;
+}
+
+.region-picker:active {
+  background: #f1f3f5;
+  transform: scale(0.98);
+}
+
+.picker-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-selection {
+  flex: 1;
+}
+
+.region-text {
+  display: block;
+  font-size: 36rpx;
+  color: #2c3e50;
+  font-weight: 500;
+  margin-bottom: 12rpx;
+}
+
+.city-text {
+  font-size: 28rpx;
+  color: #7f8c8d;
+}
+
+.arrow-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 20rpx;
+}
+
+/* 提交按钮 */
+.submit-btn {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border-radius: 16rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 34rpx;
+  font-weight: 500;
+  box-shadow: 0 6rpx 20rpx rgba(52,152,219,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:active {
+  transform: scale(0.96);
+  opacity: 0.9;
+}
+
+.btn-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
