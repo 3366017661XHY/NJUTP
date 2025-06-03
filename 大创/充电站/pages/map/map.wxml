@@ -1,0 +1,79 @@
+<view class="container">
+  <!-- 地图容器 -->
+  <map 
+    id="map" 
+    longitude="{{longitude}}" 
+    latitude="{{latitude}}"
+    markers="{{markers}}"
+    bindmarkertap="makertap"
+    style="width: 100%; height: 70vh;"
+    class="main-map">
+  </map>
+
+  <!-- 信息面板 -->
+  <view class="info-panel card-style" wx:if="{{selectedMarker}}">
+    <!-- 标题区域 -->
+    <view class="panel-header">
+      <text class="title">{{selectedMarker.name}}</text>
+      <text class="subtitle">日均客流 {{selectedMarker.dailyFlow}}人</text>
+    </view>
+
+    <!-- 周边基建 -->
+    <view class="facilities">
+      <view class="facility-grid">
+   <block wx:for="{{facilityList}}" wx:key="index">
+          <view class="facility-item" wx:if="{{item.value > 0}}">
+            <image src="{{item.icon}}" class="facility-icon"/>
+            <view class="facility-info">
+              <text class="facility-count">{{item.value}}个</text>
+              <text class="facility-name">{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <!-- 参数输入区域 -->
+    <view class="input-panel">
+      <view class="input-group">
+        <text class="input-label">充电桩数量</text>
+        <input type="number" value="{{inputPiles}}" 
+               class="styled-input"
+               data-field="inputPiles" 
+               bindinput="handleInput"
+               placeholder="请输入数量"/>
+      </view>
+      
+      <view class="input-group">
+        <text class="input-label">单桩功率(kW)</text>
+        <input type="number" value="{{inputPower}}" 
+               class="styled-input"
+               data-field="inputPower" 
+               bindinput="handleInput"
+               placeholder="请输入功率"/>
+      </view>
+
+      <view class="input-group">
+        <text class="input-label">电价(元/度)</text>
+        <input type="number" value="{{inputPrice}}" 
+               class="styled-input"
+               data-field="inputPrice" 
+               step="0.1" 
+               bindinput="handleInput"
+               placeholder="请输入电价"/>
+      </view>
+
+      <!-- 计算结果 -->
+      <view class="result-card">
+        <view class="result-item">
+          <text class="result-label">预估客流量</text>
+          <text class="result-value highlight">{{calculatedFlow}}人/日</text>
+        </view>
+        <view class="result-item">
+          <text class="result-label">桩利用率</text>
+          <text class="result-value highlight">{{utilization}}人/桩</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
